@@ -1,7 +1,8 @@
-package com.developer.mvvmshoppinglist
+package com.developer.mvvmshoppinglist.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.developer.mvvmshoppinglist.R
 
 /* 
  * Capmega Soluciones Informáticas S.A.S de C.V 
