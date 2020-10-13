@@ -3,7 +3,6 @@ package com.developer.mvvmshoppinglist.ui
 import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDialog
 import com.developer.mvvmshoppinglist.R
 import com.developer.mvvmshoppinglist.entities.ShoppingItem

@@ -14,6 +14,9 @@ import com.developer.mvvmshoppinglist.repositories.ShoppingRepository
 import com.developer.mvvmshoppinglist.viewmodels.ShoppingViewModel
 import com.developer.mvvmshoppinglist.viewmodels.ShoppingViewModelFactory
 import kotlinx.android.synthetic.main.shopping_activity.*
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
+import org.kodein.di.generic.instance
 
 /* 
  * Capmega Soluciones Informáticas S.A.S de C.V 
@@ -22,7 +25,10 @@ import kotlinx.android.synthetic.main.shopping_activity.*
  * ivant@capmega.com
  */
 
-class ShoppingActivity : AppCompatActivity(), AddDialogListener{
+class ShoppingActivity : AppCompatActivity(), AddDialogListener, KodeinAware{
+
+    override val kodein by kodein()
+    private val factory:ShoppingViewModelFactory by instance()
 
     private var viewModel:ShoppingViewModel? = null
 
@@ -30,9 +36,6 @@ class ShoppingActivity : AppCompatActivity(), AddDialogListener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.shopping_activity)
 
-        val dataBase = ShoppingDataBase(this)
-        val repository = ShoppingRepository(dataBase)
-        val factory = ShoppingViewModelFactory(repository)
         viewModel = ViewModelProvider(this,factory).get(ShoppingViewModel::class.java)
 
         val adapter = ShoppingAdapter(listOf(),viewModel!!)
