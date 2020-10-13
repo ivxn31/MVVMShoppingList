@@ -21,3 +21,11 @@ data class ShoppingItem(
     @PrimaryKey(autoGenerate = true)
     var id: Int? = null
 }
+
+class Person{
+    var name = ""
+
+    init {
+        name = "Sebastian"
+    }
+}
