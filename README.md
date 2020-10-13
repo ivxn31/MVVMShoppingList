@@ -4,8 +4,6 @@ Aplicación móvil para realizar una lista de compras básica
 
 # Herramientas
 
-Esta aplicación móvil con las siguientes librerías:
-
  - Lenguaje kotlin
  - Patron de Diseño MVVM
  - Lifecycle
